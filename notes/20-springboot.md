@@ -56,7 +56,7 @@ management:
 
 再然后启动之后，就可以通过访问[监控接口](http://localhost:8080/springboot-optimization/actuator/prometheus)，效果如下图所示：
 
-![](https://image.happymaya.cn/assert/blog/springboot/pringboot-prometheus-init.png)
+![](https://image.happymaya.cn/assert/blog/springboot/springboot-prometheus-init.png)
 
 想要监控业务数据也非常的简单，只需要注入一个 `MeterRegistry`实例即可，如下代码：
 
