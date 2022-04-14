@@ -1,0 +1,38 @@
+#management.endpoint.metrics.enabled=true
+#management.endpoints.web.exposure.include=*
+#management.endpoint.prometheus.enabled=true
+#management.metrics.export.prometheus.enabled=true
+
+
+
+# prometheus 监控平台配置
+management:
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+    health:
+      show-details: ALWAYS
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: configprops
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    tags:
+      application: ${server.servlet.context-path}
+
+server:
+  port: 8081
+  servlet:
+    context-path: /springboot-optimization
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 300MB
